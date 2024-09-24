@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Langit Penuh Bintang dan Galaksi</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(circle, rgba(50, 0, 80, 1) 0%, rgba(0, 0, 0, 1) 100%);
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+        }
+
+        .heart {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(198, 179, 179, 0.2);
+            z-index: 1; /* Agar tetap di atas bintang */
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        .star {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 0, 255, 0.7);
+            opacity: 0.8;
+            animation: twinkle 1.5s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .moon {
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            top: 10%;
+            left: 80%;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .galaxy {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            top: 40%;
+            left: 10%;
+            box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+            animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart">
+        <h1> Dear Nugi</h1>
+        <p> How ur life without me? Menyenangkan atau tidak? kamu kangen aku ga?</p>
+        <p> Bahkan sampai saat ini, aku masih nungguin kamu memperbaiki diri.</p>
+        <p> aku gatau lagi harus bilang gimana, setiap kali aku upgrade diri, tujuan aku cuma buat kamu</p>
+        <p> jujur rasanya cape banget, kuliah sambil mikirin kamu. tapi untuk balikkan aku gabisa kalau kamu kaya gitu lagi</p>
+        <p> kesempatan yang aku kasihpun rasanya gaada harga dirinya. kamu terlalu menyepelekan itu semua</p>
+        <p> Semoga kamu bahagia terus yaaa, sampai dapetin pasangan yang baik dan cantik sesuai keinginan kamu</p>
+        <h2> Love u, Nug </h2>
+    </div>
+
+    <!-- Bintang -->
+    <script>
+        for (let i = 0; i < 1500; i++) {
+            let star = document.createElement('div');
+            star.className = 'star';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.width = Math.random() * 2 + 1 + 'px'; // Ukuran acak
+            star.style.height = star.style.width; // Menjaga proporsi
+            document.body.appendChild(star);
+        }
+
+        // Bulan dan Galaksi
+        let moon = document.createElement('div');
+        moon.className = 'moon';
+        document.body.appendChild(moon);
+
+        let galaxy = document.createElement('div');
+        galaxy.className = 'galaxy';
+        document.body.appendChild(galaxy);
+    </script>
+</body>
+</html>
